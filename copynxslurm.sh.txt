@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in $(seq 1 200)
+do
+        cd TRAJ$i
+        cp ../nxslurm.sh .
+        sed -i "s/906/$i/g" nxslurm.sh
+        cd ..
+done
